@@ -8,7 +8,7 @@ def take_csv_and_create_dict(csv_path):
     with open(csv_path, mode='r') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            key = row['first']+'-'+row['last']
+            key = row['first'] + '-' + row['last']
             new_dict[key] = row
     return new_dict
 
@@ -23,4 +23,5 @@ def diff_new_dicts(old_dict, new_dict):
 
 
 z = diff_new_dicts(x, y).pretty()
-print(z)
+with open('output-file.txt', 'w') as f:
+    f.writelines(z)
