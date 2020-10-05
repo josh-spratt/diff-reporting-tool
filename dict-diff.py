@@ -18,10 +18,8 @@ y = take_csv_and_create_dict('csv-2.csv')
 
 
 def diff_new_dicts(old_dict, new_dict):
-    diff = DeepDiff(old_dict, new_dict, ignore_order=True).pretty()
+    diff = DeepDiff(old_dict, new_dict, ignore_order=True, verbose_level=2).to_dict()
     return diff
 
 
 z = diff_new_dicts(x, y)
-with open('output-file.txt', 'w') as f:
-    f.writelines(z)
