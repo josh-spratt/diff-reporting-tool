@@ -1,0 +1,5 @@
+Item root['terry-conner'] added to dictionary.
+Item root['oliver-conner'] added to dictionary.
+Value of root['finn-spratt']['hobby'] changed from "playing with toys" to "going on walks".
+Value of root['josh-spratt']['hobby'] changed from "golf" to "writing code".
+Value of root['rachel-spratt']['hobby'] changed from "youtube" to "decoration".
