@@ -116,6 +116,7 @@ venv.bak/
 
 # Rope project settings
 .ropeproject
+.DS_store
 
 # mkdocs documentation
 /site
