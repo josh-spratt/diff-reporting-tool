@@ -1,6 +1,7 @@
 import csv
 from deepdiff import DeepDiff
 import json
+import yaml
 
 
 def take_csv_and_create_dict(csv_path):
@@ -13,13 +14,23 @@ def take_csv_and_create_dict(csv_path):
     return new_dict
 
 
-x = take_csv_and_create_dict('csv-1.csv')
-y = take_csv_and_create_dict('csv-2.csv')
+old_data = take_csv_and_create_dict('csv-1.csv')
+new_data = take_csv_and_create_dict('csv-2.csv')
 
 
 def diff_new_dicts(old_dict, new_dict):
-    diff = DeepDiff(old_dict, new_dict, ignore_order=True, verbose_level=2).to_dict()
+    diff = DeepDiff(old_dict, new_dict, ignore_order=True,
+                    verbose_level=2).to_dict()
     return diff
 
 
-z = diff_new_dicts(x, y)
+final_diff = diff_new_dicts(old_data, new_data)
+
+
+def write_output_yaml(diff_data):
+    name = input('please name output file\n')
+    with open('{0}.yaml'.format(name), 'w') as f:
+        yaml.dump(diff_data, f)
+
+
+write_output_yaml(final_diff)

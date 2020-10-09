@@ -1,0 +1,27 @@
+dictionary_item_added:
+  root['oliver-conner']:
+    age: '5'
+    eye color: brown
+    first: oliver
+    hair color: brown
+    hobby: eating cakes
+    last: conner
+    occupation: doggo
+  root['terry-conner']:
+    age: '60'
+    eye color: brown
+    first: terry
+    hair color: grey
+    hobby: watching 90 day fiance
+    last: conner
+    occupation: retired ironworker
+values_changed:
+  root['finn-spratt']['hobby']:
+    new_value: going on walks
+    old_value: playing with toys
+  root['josh-spratt']['hobby']:
+    new_value: writing code
+    old_value: golf
+  root['rachel-spratt']['hobby']:
+    new_value: decoration
+    old_value: youtube
